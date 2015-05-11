@@ -1,0 +1,129 @@
+<resources>
+    <string name="app_name">Карта погоды</string>
+    <string name="action_settings">Настройки</string>
+    <string name="action_refresh">Обновить данные</string>
+    <string name="action_refresh_key">refresh_base</string>
+    <string name="action_redraw">Перерисовать знаки</string>
+    <string name="action_redraw_key">redraw_base</string>
+    <string name="action_cler_base">Очистить базу</string>
+    <string name="action_cler_base_key">clear_base</string>
+    <string name="action_start_service_label">Запустить сервис</string>
+    <string name="action_start_service_summary">Остановить сервис</string>
+    <string name="action_start_service_key">start_service</string>
+    <string name="action_stop_service_label">Остановить сервис</string>
+    <string name="action_stop_service_summary">Остановить сервис</string>
+    <string name="action_stop_service_key">stop_service</string>
+    <string name="action_set_gen_rect">Установить область 1</string>
+    <string name="action_set_spec_rect">Установить область 2</string>
+    <string name="pref_show_rect_label">Районы загрузок</string>
+    <string name="pref_show_rect_summary">Отображать районы загрузки погодных данных</string>
+    <string name="pref_show_rect_key" translateble="false">show_rect_but_key</string>>
+    <string name="pref_show_rect_default" translateble="false">false</string>>
+    <string name="map_zoom_level">1</string>
+    <string name="map_scroll_x">0</string>
+    <string name="map_scroll_y">0</string>
+    <string name="caption_system_settings">Системные настройки</string>
+    <string name="caption_weather_settings">Настройки загрузки погоды</string>
+    <string name="button_set_general_rect">Указать большой район</string>
+    <string name="button_set_general_summary">Для загрузки погодных данных для больших площадей с низкой подробностью</string>
+    <string name="button_set_general_rect_key" translateble="false">gen_rect_but_key</string>>
+    <string name="general_left_top_lat_key" translateble="false">general_left_top_lat</string>
+    <string name="general_left_top_lat_default" translateble="false">70.0</string>
+    <string name="general_left_top_lon_key" translateble="false">general_left_top_lon</string>
+    <string name="general_left_top_lon_default" translateble="false">30.0</string>
+    <string name="general_right_bottom_lat_key" translateble="false">general_right_bottom_lat</string>
+    <string name="general_right_bottom_lat_default" translateble="false">42.0</string>
+    <string name="general_right_bottom_lon_key" translateble="false">general_right_bottom_lon</string>
+    <string name="general_right_bottom_lon_default" translateble="false">160.0</string>
+    <string name="button_set_special_rect">Указать малый район</string>
+    <string name="button_set_special_summary">Для загрузки погодных данных для малых площадей с высокой подробностью</string>
+    <string name="button_set_special_rect_key" translateble="false">spec_rect_but_key</string>>
+    <string name="special_left_top_lat_default">56.80</string>
+    <string name="special_left_top_lat_key">special_left_top_lat</string>
+    <string name="special_left_top_lon_default">36.23</string>
+    <string name="special_left_top_lon_key">special_left_top_lon</string>
+    <string name="special_right_bottom_lat_default">54.79</string>
+    <string name="special_right_bottom_lat_key">special_right_bottom_lat</string>
+    <string name="special_right_bottom_lon_default">40.063</string>
+    <string name="special_right_bottom_lon_key">special_right_bottom_lon</string>
+    <string name="pref_show_debug_label">Отладка</string>
+    <string name="pref_show_debug_key" translateble="false">show_debug</string>
+    <string name="pref_show_debug_default" translateble="false">true</string>
+    <string name="content_provider_autho" translateble="false">ru.gleb.manyagin.weathermap.provider.WeatherProvider</string>
+
+    <string name="caption_data_base_commands">Управление данными</string>
+    <string name="title_activity_forecast">Погода в городе</string>
+
+    <string name="caption_weather_forecast_lon">Долгота</string>
+    <string name="caption_weather_forecast_lat">Широта</string>
+    <string name="caption_weather_forecast_pressure">Давление</string>
+    <string name="caption_weather_forecast_humidity">Влажность</string>
+    <string name="caption_weather_forecast_temp_min">Минимальная температура</string>
+    <string name="caption_weather_forecast_temp_max">Максимальная температура</string>
+    <string name="caption_weather_forecast_wind_speed">Скорость ветра</string>
+    <string name="caption_weather_forecast_wind_deg">Направление ветра</string>
+    <string name="caption_weather_forecast_cloudness">Облачность</string>
+    <string name="caption_weather_forecast_main">Погода</string>
+    <string name="caption_weather_forecast_description">Описание</string>
+    <string name="caption_weather_forecast_date">Дата</string>
+    <string name="caption_weather_forecast_degrees">º</string>
+    <string name="caption_weather_forecast_c">C</string>
+    <string name="caption_weather_forecast_mm_rt_st">мм.рт.ст</string>
+    <string name="caption_weather_forecast_speed_descr">м/c</string>
+    <string name="title_activity_current_position_forecast">CurrentPositionForecastActivity</string>
+
+
+    <string name="caption_current_cord">Прогноз погоды</string>
+
+    <string name="pref_current_latitude_label">Текущая широта</string>
+    <string name="pref_current_latitude_summary">Координата устройства, для запроса подгоды (широта)</string>
+    <string name="pref_current_latitude_key" translateble="false">current_latitude</string>
+    <string name="pref_current_latitude_default" translateble="false">55.73</string>
+
+    <string name="pref_current_longitude_label">Текущая долгота</string>
+    <string name="pref_current_longitude_summary">Координата устройства, для запроса подгоды (долгота)</string>
+    <string name="pref_current_longitude_key" translateble="false">current_longitude</string>
+    <string name="pref_current_longitude_default" translateble="false">37.61</string>
+
+    <string name="pref_forecast_days_label">Количество дней</string>
+    <string name="pref_forecast_days_summary">Количество дней, на которые делаем прогноз по текущей позиции</string>
+    <string name="pref_forecast_days_key" translateble="false">forecast_days</string>
+    <string name="pref_forecast_days_default" translateble="false">10</string>
+
+    <string name="pref_forecast_interval_label">Интервал обновления (мин)</string>
+    <string name="pref_forecast_interval_summary">Интервал периодичности обновления данных о погоде</string>
+    <string name="pref_forecast_interval_key" translateble="false">forecast_interval</string>
+    <string name="pref_forecast_interval_default" translateble="false">10</string>
+
+    <string name="pref_current_coord_auto_label">Использовать GPS</string>
+    <string name="pref_current_coord_auto_summary">Координата устройства, для запроса подгоды (атоматически)</string>
+    <string name="pref_current_coord_auto_key" translateble="false">current_auto_coord</string>
+    <string name="pref_current_coord_auto_default" translateble="false">false</string>
+
+    <string name="current_position_map_text">Текущая позиция</string>
+    <string name="action_map_redraw_tokens">ru.gleb.manyagin.action.DRAW_WEATHER_TOKENS</string>
+    <string name="action_fetch_weather_data">ru.gleb.manyagin.action.FETCH_WEATHER_DATA</string>
+
+    <string name="pref_last_data_update_label">Время прошлого обновления данных</string>
+    <string name="pref_last_data_update_key">last_data_update</string>
+    <string name="pref_last_data_update_default">0</string>
+
+    <string name="advice_rain">Сегодня возможен дождь, рекомендую взять с собой зонт</string>
+    <string name="advice_thundershtorm">Сегодня возможна гроза, рекомендую выключить электро приборы</string>
+    <string name="advice_drizzle">Сегодня возможно морось, рекомендую соответствующую одежду</string>
+    <string name="advice_snow">Сегодня возможен снег, рекомендую отказаться от использования автомобиля</string>
+    <string name="advice_atmosphere">Сегодня возможены атмосферные явления. Будет плохая видимость. Рекомендую отказаться от использования автомобиля</string>
+    <string name="advice_clouds">Сегодня возможена облачность. Очки от солнца могут не понадобиться</string>
+    <string name="advice_clear_sky">Сегодня небо чистое. Рекомендую захватить солнцезащитные очки</string>
+    <string name="advice_extrime">Внимание! Штормовое предупреждение!</string>
+    <string name="advice">Прогноз погоды на сегодня не ясный. Рекомендую ознакомиться подробнее, используя приложение Карта погоды</string>
+
+    <string name="pref_time_to_notifi_label">Время совета</string>
+    <string name="pref_time_to_notifi_summary">Время, когда будет выводиться уведомление с советом. (Например нужен ли зонт)</string>
+    <string name="pref_time_to_notifi_key" translateble="false">time_to_notifi</string>
+    <string name="pref_time_to_notifi_default" translateble="false">0</string>
+
+    <string name="caption_set_time_pref" translateble="false">Установить</string>
+    <string name="caption_cancel_time_pref" translateble="false">Отменить</string>
+    <string name="hello_world">Пример текста</string>
+</resources>

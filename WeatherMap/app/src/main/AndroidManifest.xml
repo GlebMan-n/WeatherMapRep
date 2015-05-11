@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.gleb.manyagin.weathermap" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:scheme="geo" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".settings.SettingsActivity"
+            android:label="@string/action_settings"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.gleb.manyagin.weathermap.MainActivity" />
+        </activity>
+        <activity
+            android:name=".settings.DataControlActivity"
+            android:label="@string/caption_data_base_commands"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.gleb.manyagin.weathermap.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.ForecastActivity"
+            android:label="@string/title_activity_forecast"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.gleb.manyagin.weathermap.MainActivity" />
+        </activity>
+
+        <provider
+            android:name=".provider.WeatherContentProvider"
+            android:authorities="ru.gleb.manyagin.weathermap.provider.WeatherProvider"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.CurrentPositionForecastActivity"
+            android:label="@string/caption_current_cord"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="ru.gleb.manyagin.weathermap.MainActivity" />
+        </activity>
+
+        <receiver
+            android:name=".broadcastReceivers.DrawWeatherReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="@string/action_map_redraw_tokens" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".broadcastReceivers.FetchWeatherReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="@string/action_fetch_weather_data" />
+                <action android:name="@string/action_fetch_weather_data" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".services.WeatherService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+
+        <receiver
+            android:name=".broadcastReceivers.DateBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".broadcastReceivers.AutostartBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

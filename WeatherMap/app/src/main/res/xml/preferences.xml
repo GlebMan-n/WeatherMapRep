@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <PreferenceCategory
+        android:title="@string/caption_system_settings">
+        <CheckBoxPreference
+            android:title="@string/pref_show_debug_label"
+            android:summary="@string/pref_show_debug_label"
+            android:key="@string/pref_show_debug_key"
+            android:defaultValue="@string/pref_show_debug_default" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/caption_weather_settings">
+
+        <CheckBoxPreference
+            android:title="@string/pref_show_rect_label"
+            android:summary="@string/pref_show_rect_summary"
+            android:key="@string/pref_show_rect_key"
+            android:defaultValue="@string/pref_show_rect_default" />
+
+        <EditTextPreference
+            android:title="@string/pref_forecast_interval_label"
+            android:key="@string/pref_forecast_interval_key"
+            android:defaultValue="@string/pref_forecast_interval_default"
+            android:summary="@string/pref_forecast_interval_summary"
+            android:inputType="number"
+            android:singleLine="true"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/caption_current_cord">
+        <EditTextPreference
+            android:title="@string/pref_forecast_days_label"
+            android:key="@string/pref_forecast_days_key"
+            android:defaultValue="@string/pref_forecast_days_default"
+            android:summary="@string/pref_forecast_days_summary"
+            android:inputType="number"
+            android:singleLine="true"/>
+
+        <ru.gleb.manyagin.weathermap.dialogs.EditTimePreference
+            android:title="@string/pref_time_to_notifi_label"
+            android:key="@string/pref_time_to_notifi_key"
+            android:defaultValue="@string/pref_time_to_notifi_default"
+            android:summary="@string/pref_time_to_notifi_summary"/>
+
+    </PreferenceCategory>
+</PreferenceScreen>

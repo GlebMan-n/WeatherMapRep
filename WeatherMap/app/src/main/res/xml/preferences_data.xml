@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/caption_data_base_commands">
+
+        <Preference android:title="@string/action_refresh"
+            android:key="@string/action_refresh_key"
+            android:summary="Запустить процесс получения данных о погоде"/>
+
+        <Preference android:title="@string/action_start_service_label"
+            android:key="@string/action_start_service_key"
+            android:summary="@string/action_start_service_summary"/>
+
+
+        <Preference android:title="@string/action_stop_service_label"
+            android:key="@string/action_stop_service_key"
+            android:summary="@string/action_stop_service_summary"/>
+
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/pref_show_rect_label">>
+        <Preference android:title="@string/button_set_general_rect"
+            android:key="@string/button_set_general_rect_key"
+            android:summary="@string/button_set_general_summary"/>
+
+        <Preference android:title="@string/button_set_special_rect"
+            android:key="@string/button_set_special_rect_key"
+            android:summary="@string/button_set_special_summary"/>
+    </PreferenceCategory>
+</PreferenceScreen>
