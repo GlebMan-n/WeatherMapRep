@@ -98,7 +98,7 @@ public class FetchWeatherReceiver extends BroadcastReceiver {
             default:
                 break;
         }
-        NotifiClass notifi = new NotifiClass(context, this.getClass(), "Карта погоды", "Информация", strAdvice, 101);
+        NotifiClass notifi = new NotifiClass(context, this.getClass(), "Карта погоды", "Информация", strAdvice, 102);
         }
     }
 }
