@@ -118,7 +118,7 @@ public class MainActivity extends ActionBarActivity {
                         bShowRect = true;
                         mapView.setClickable(true);
                         if(rectangleTokenGen == null)
-                            drawRectangles();
+                            return true;
                         geoGenLeftTop = new GeoPoint(rectangleTokenGen.getLocLeftTop().getLatitude(), rectangleTokenGen.getLocLeftTop().getLongitude());
                         geoGenRightBottom = new GeoPoint(rectangleTokenGen.getLocRighBottom().getLatitude(), rectangleTokenGen.getLocRighBottom().getLongitude());
                         saveSettings();
@@ -137,7 +137,7 @@ public class MainActivity extends ActionBarActivity {
                         bShowRect = true;
                         mapView.setClickable(true);
                         if(rectangleTokenSpec == null)
-                            drawRectangles();
+                           return true;
                         geoSpecLeftTop = new GeoPoint(rectangleTokenSpec.getLocLeftTop().getLatitude(), rectangleTokenSpec.getLocLeftTop().getLongitude());
                         geoSpecRightBottom = new GeoPoint(rectangleTokenSpec.getLocRighBottom().getLatitude(), rectangleTokenSpec.getLocRighBottom().getLongitude());
                         saveSettings();
@@ -315,12 +315,17 @@ public class MainActivity extends ActionBarActivity {
             rectangleTokenSpec = null;
         }
 
+        try {
+
+
             rectangleTokenGen = new RectangleToken(this, Color.RED, geoGenLeftTop, geoGenRightBottom);
             mapView.getOverlays().add(rectangleTokenGen);
 
             rectangleTokenSpec = new RectangleToken(this, Color.BLUE, geoSpecLeftTop, geoSpecRightBottom);
             mapView.getOverlays().add(rectangleTokenSpec);
-
+        }
+        catch (Exception e)
+        {}
 
         setWeatherRectanglesVisible(bShowRect);
     }
@@ -500,6 +505,7 @@ public class MainActivity extends ActionBarActivity {
 
         setRectangleGen = new Boolean(setGenRect);
         setRectangleSpec = new Boolean(setSpecRect);
+
         bShowDebug = preference.getBoolean(getString(R.string.pref_show_debug_key), new Boolean(getString(R.string.pref_show_debug_default)));
         bShowRect = preference.getBoolean(getString(R.string.pref_show_rect_key), new Boolean(getString(R.string.pref_show_rect_default)));
         intent.putExtra("set_general_rect", "false");
@@ -522,7 +528,6 @@ public class MainActivity extends ActionBarActivity {
         }
 
         setContentView(rl);
-
 
         Log.d(LOG_TAG, "MainActivity: onCreate");
 
