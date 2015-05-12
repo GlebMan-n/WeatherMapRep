@@ -117,6 +117,8 @@ public class MainActivity extends ActionBarActivity {
                         setRectangleGen = false;
                         bShowRect = true;
                         mapView.setClickable(true);
+                        if(rectangleTokenGen == null)
+                            drawRectangles();
                         geoGenLeftTop = new GeoPoint(rectangleTokenGen.getLocLeftTop().getLatitude(), rectangleTokenGen.getLocLeftTop().getLongitude());
                         geoGenRightBottom = new GeoPoint(rectangleTokenGen.getLocRighBottom().getLatitude(), rectangleTokenGen.getLocRighBottom().getLongitude());
                         saveSettings();
@@ -134,6 +136,8 @@ public class MainActivity extends ActionBarActivity {
                         setRectangleSpec = false;
                         bShowRect = true;
                         mapView.setClickable(true);
+                        if(rectangleTokenSpec == null)
+                            drawRectangles();
                         geoSpecLeftTop = new GeoPoint(rectangleTokenSpec.getLocLeftTop().getLatitude(), rectangleTokenSpec.getLocLeftTop().getLongitude());
                         geoSpecRightBottom = new GeoPoint(rectangleTokenSpec.getLocRighBottom().getLatitude(), rectangleTokenSpec.getLocRighBottom().getLongitude());
                         saveSettings();
