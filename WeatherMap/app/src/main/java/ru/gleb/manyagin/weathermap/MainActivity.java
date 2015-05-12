@@ -518,7 +518,7 @@ public class MainActivity extends ActionBarActivity {
         }
 
         setContentView(rl);
-        registerBroadcastReceiver();
+
 
         Log.d(LOG_TAG, "MainActivity: onCreate");
 
@@ -551,7 +551,7 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
+        registerBroadcastReceiver();
 
     }
 
